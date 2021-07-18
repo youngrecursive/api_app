@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des sociétés{% endblock %}
+
+{% block body %}
+
+{% for societe in societes %}
+ <div class="card">
+    <h1>{{ societe.NomSociete }}</h1>
+      <p>Numéro de siret : {{ societe.siret }}</p>
+      <p>Numéro de siren : {{ societe.siren }}</p>
+</div>
+
+ {% endfor %}
+
+{% endblock %}
